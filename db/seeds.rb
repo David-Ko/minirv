@@ -7,16 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Trailer.destroy_all
-    number = Faker::Number.number(4)
+
+10.times do
+    number = Faker::Number.number(1)
     name = Faker::Name.first_name
     random = Faker::Number.between(1, 5)
     cooktop = Faker::Number.between(1, 4)
     bathroom = Faker::Number.between(1, 2)
     description = Faker::GreekPhilosophers.quote
     
-10.times do
-    t = Trailer.create(
-        name: "#{number.to_s} #{name}",
+    Trailer.create(
+        name: "197#{number.to_s} #{name}",
         image: "https://www.pexels.com/photo/no-person-landscape-travel-desert-106401/",
         length: "13 feet",
         brake: "No",

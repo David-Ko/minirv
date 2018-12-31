@@ -1,3 +1,29 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag 'rv04.jpeg', class: "d-block w-100 img-fluid" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag 'rv05.jpeg', class: "d-block w-100" %>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag 'contactus.jpeg', class: "d-block w-100" %>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
 <div class= "container" id="first">
     <h4>Escape reality</h4>
     <h4>Enjoy an adventure in nature</h4>
@@ -12,5 +38,23 @@
     It'll take you back to a simplier time where you can enjoy the 
     nature and relax alone or with those you love.
     </p>
+</div>
+
+<div class="container-fluid p-3 ">
+    <div class="row">
+        <% @trailers.each do |t|%>
+        <div class="container col-sm-12 col-md-6 col-lg-4 p-3">
+                <div class = "p-3">
+                <%= image_tag 'rv02.jpeg', id: 'pic' %>
+                <br><br>
+                <div id="description">
+                <%= t.name%><br>
+                <%= t.description%>
+                <%= link_to("Learn more", "/trailers/#{t.id}")%>
+                </div>
+                </div>
+        </div>
+        <% end %>
+    </div>
 </div>
 
