@@ -10,7 +10,7 @@
     color: white;
 }
 
-#nav {
+#nav, #navbarNav {
     font-family: 'American Typewriter', Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     color: burlywood;
@@ -36,4 +36,15 @@
 
 #description {
     text-align: center;
+}
+
+#show > #font {
+    font-weight: bold;
+}
+
+#show {
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-family: 'American Typewriter';
 }

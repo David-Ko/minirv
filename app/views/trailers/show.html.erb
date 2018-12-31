@@ -1,10 +1,14 @@
 <div class = "container-fluid">
+    <div class = "container" id="show">
     <%= image_tag 'rv02.jpeg' %>
-    <%= @trailers.name%>
-    <%= @trailers.cooktop%>
-    <%= @trailers.electrical%>
-    <%= @trailers.brake%>
-    <%= @trailers.sleeps%>
-    <%= @trailers.price%>
-    <%= @trailers.description%>
+    </div>
+    <div class = "container" id="show">
+    <p><span id = "font">Name:</span>   <%= @trailers.name%></p>
+    <p><span id = "font">Cooktop: </span>   <%= @trailers.cooktop%></p>
+    <p><span id = "font">Electrical:</span> <%= @trailers.electrical%></p>
+    <p><span id = "font">Brake:</span>  <%= @trailers.brake%></p>
+    <p><span id = "font">Sleeps:</span> <%= @trailers.sleeps%></p>
+    <p><span id = "font">Price: </span> <%= @trailers.price%></p>
+    <p><span id = "font">Description:   </span><%= @trailers.description%></p>
+    </div>
 </div>
