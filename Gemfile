@@ -42,6 +42,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'hirb'
+  gem 'faker'
 end
 
 group :development do
